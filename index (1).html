@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aarthi Karunanithi | Portfolio</title>
+<style>
+:root{--bg:#f8f7fc;--white:#fff;--dark:#17131f;--muted:#706a78;--purple:#9b6cff;--purple-dark:#6e42c1;--purple-light:#e8dcff;--border:rgba(53,34,82,.1)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Arial,sans-serif;background:radial-gradient(circle at 10% 10%,#eadcff,transparent 28%),radial-gradient(circle at 90% 30%,#f2dcff,transparent 28%),var(--bg);color:var(--dark);overflow-x:hidden}a{text-decoration:none;color:inherit}
+.navbar{position:fixed;top:20px;left:50%;transform:translateX(-50%);width:min(92%,1180px);padding:13px 17px 13px 22px;display:flex;align-items:center;justify-content:space-between;background:#ffffffc7;border:1px solid var(--border);backdrop-filter:blur(20px);border-radius:100px;z-index:1000}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800}.logo-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;color:white;background:linear-gradient(135deg,#b38aff,#7650d9)}
+.nav-links{display:flex;gap:30px}.nav-links a{color:#635d69;font-size:14px;font-weight:600}.nav-links a:hover{color:var(--purple-dark)}.nav-cta{background:var(--dark);color:white;padding:12px 19px;border-radius:100px;font-size:13px;font-weight:700}.menu-btn{display:none;border:0;background:transparent;font-size:25px}
+section{width:min(1120px,90%);margin:auto}.section-space{padding:120px 0}.section-tag{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:100px;background:#a77aff1a;color:#7047bb;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px}.section-tag:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--purple)}
+.section-title{margin-top:18px;font-size:clamp(34px,5vw,62px);line-height:.98;letter-spacing:-3px}.section-title span{font-family:Georgia,serif;font-style:italic;color:var(--purple-dark)}
+.hero{min-height:100vh;padding-top:140px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px}.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;background:#ffffffb3;border:1px solid var(--border);border-radius:100px;color:#675f70;font-size:12px;font-weight:700}.live-dot{width:8px;height:8px;border-radius:50%;background:#a26fff;box-shadow:0 0 0 6px #a26fff1f}
+.hero h1{margin-top:25px;font-size:clamp(55px,8vw,100px);line-height:.84;letter-spacing:-6px}.hero h1 .outline{color:transparent;-webkit-text-stroke:1.5px #80629e}.hero h1 .script{font-family:Georgia,serif;font-style:italic;color:var(--purple-dark)}
+.hero-description{max-width:590px;margin-top:28px;color:var(--muted);line-height:1.8;font-size:16px}.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 21px;border-radius:100px;border:1px solid var(--border);font-size:13px;font-weight:800;transition:.3s}.btn-primary{background:var(--dark);color:#fff;border-color:var(--dark)}.btn-secondary{background:#ffffffa8}.btn:hover{transform:translateY(-3px)}
+.hero-card{position:relative;min-height:510px;display:grid;place-items:center}.profile-ring{width:370px;height:370px;border-radius:50%;padding:12px;background:linear-gradient(135deg,#d7b9ff,#8c5ce0,#f2ddff,#8c5ce0);box-shadow:0 30px 80px #7546b938;animation:float 5s ease-in-out infinite}.profile-inner{width:100%;height:100%;border-radius:50%;background:linear-gradient(145deg,#211a29,#463152);display:grid;place-items:center;overflow:hidden}.profile-inner:after{content:"AK";font-family:Georgia,serif;font-size:110px;font-style:italic;color:#fffd}.float-card{position:absolute;padding:15px 18px;background:#ffffffc7;backdrop-filter:blur(15px);border:1px solid var(--border);border-radius:20px;box-shadow:0 25px 70px #4f31791f}.card-one{top:30px;right:10px}.card-two{bottom:30px;left:0}.float-card small{color:#817989;display:block;font-size:10px;margin-bottom:4px;font-weight:700}.float-card strong{font-size:14px}
+.marquee-wrapper{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0;background:#ffffff59}.marquee{display:flex;width:max-content;animation:marquee 22s linear infinite}.marquee span{font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#7d7189;margin-right:45px}.marquee span:after{content:"✦";color:var(--purple);margin-left:45px}
+.about-grid,.skills-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.about-left p,.skills-intro p{margin-top:25px;color:var(--muted);line-height:1.9}.about-right{display:grid;grid-template-columns:1fr 1fr;gap:14px}.info-card,.cert-card{padding:27px;border:1px solid var(--border);background:#ffffff99;border-radius:25px;transition:.35s}.info-card{min-height:190px}.info-card:hover,.cert-card:hover{transform:translateY(-8px);box-shadow:0 25px 70px #4f31791f}.info-icon,.cert-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:var(--purple-light);margin-bottom:20px}.info-card h3{font-size:16px;margin-bottom:8px}.info-card p,.cert-card p{color:var(--muted);font-size:13px;line-height:1.7}
+.timeline{margin-top:55px;border-left:1px solid #d8cbe5;padding-left:35px}.timeline-item{position:relative;margin-bottom:55px}.timeline-item:before{content:"";position:absolute;left:-41px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--purple);box-shadow:0 0 0 8px #9b6cff1f}.timeline-date{color:var(--purple-dark);font-size:11px;text-transform:uppercase;font-weight:800;letter-spacing:1.5px}.timeline h3{margin-top:8px;font-size:24px}.timeline-company{margin-top:5px;color:#796e80;font-weight:600}.timeline p{max-width:760px;margin-top:15px;color:var(--muted);line-height:1.8}
+.skills-cloud{display:flex;flex-wrap:wrap;gap:12px}.skill{padding:14px 18px;border-radius:100px;background:#fff;border:1px solid var(--border);font-size:13px;font-weight:700;transition:.3s}.skill:hover{background:var(--dark);color:#fff;transform:translateY(-4px)}.skill.featured{background:var(--purple);color:#fff;border-color:var(--purple)}
+.project-card{margin-top:50px;min-height:440px;padding:50px;border-radius:35px;background:radial-gradient(circle at 85% 15%,#dab7ff59,transparent 30%),linear-gradient(135deg,#201925,#392a43);color:#fff;position:relative;overflow:hidden;box-shadow:0 35px 80px #2a1c3559}.project-number{font-size:12px;color:#c8afd8;letter-spacing:2px;font-weight:800}.project-card h3{margin-top:25px;font-size:clamp(35px,5vw,65px);letter-spacing:-3px}.project-card h3 span{color:#c9a9ff;font-family:Georgia,serif;font-style:italic}.project-card p{max-width:650px;margin-top:20px;color:#c3bac9;line-height:1.8}.project-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.project-tags span{border:1px solid #ffffff26;padding:8px 12px;border-radius:100px;font-size:11px;color:#ddd3e2}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:50px}.cert-card{min-height:240px}.cert-card h3{font-size:15px;line-height:1.4}
+.contact-box{margin-top:50px;padding:65px;border-radius:35px;background:linear-gradient(135deg,#e7d6ff,#f8edff 50%,#e4d2ff);position:relative;overflow:hidden}.contact-box h2{max-width:750px;font-size:clamp(40px,6vw,72px);line-height:.95;letter-spacing:-4px}.contact-box h2 em{font-family:Georgia,serif;color:var(--purple-dark)}.contact-box p{max-width:600px;margin-top:20px;color:#706477;line-height:1.8}.contact-actions{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}.contact-info{margin-top:35px;display:flex;flex-wrap:wrap;gap:25px}.contact-info a,.contact-info span{font-size:13px;font-weight:700;color:#4f405b}
+footer{width:min(1120px,90%);margin:auto;padding:25px 0 35px;display:flex;justify-content:space-between;gap:20px;color:#817885;font-size:11px;border-top:1px solid var(--border)}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s,transform .8s}.reveal.active{opacity:1;transform:translateY(0)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:900px){.nav-links{display:none}.menu-btn{display:block}.hero{grid-template-columns:1fr;text-align:center;padding-top:150px}.hero-description{margin:auto}.hero-buttons{justify-content:center}.profile-ring{width:310px;height:310px}.about-grid,.skills-layout{grid-template-columns:1fr;gap:40px}.cert-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){section{width:91%}.section-space{padding:85px 0}.hero h1{font-size:60px;letter-spacing:-4px}.hero-card{min-height:350px}.profile-ring{width:255px;height:255px}.profile-inner:after{font-size:75px}.about-right{grid-template-columns:1fr}.cert-grid{grid-template-columns:1fr}.project-card{padding:30px;min-height:400px}.contact-box{padding:35px 25px}.contact-box h2{letter-spacing:-2px}footer{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<a href="#home" class="logo"><span class="logo-mark">AK</span><span>Aarthi K.</span></a>
+<div class="nav-links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#project">Project</a><a href="#contact">Contact</a></div>
+<a href="#contact" class="nav-cta">Let's Connect</a>
+<button class="menu-btn" id="menuBtn">☰</button>
+</nav>
+
+<main>
+<section class="hero" id="home">
+<div>
+<div class="eyebrow"><span class="live-dot"></span>Open to Internship & Entry-Level Opportunities</div>
+<h1>Aarthi<br><span class="outline">KARUNA</span><br><span class="script">nithi.</span></h1>
+<p class="hero-description">B.Com (Computer Applications) student with an interest in business, technology, digital tools and creative web development. I enjoy learning, building and turning ideas into practical digital experiences.</p>
+<div class="hero-buttons">
+<a href="#project" class="btn btn-primary">View My Work →</a>
+<a href="#contact" class="btn btn-secondary">Contact Me</a>
+<a href="mailto:aarthikarunanithi042@gmail.com" class="btn btn-secondary">Email</a>
+</div>
+</div>
+<div class="hero-card">
+<div class="profile-ring"><div class="profile-inner"></div></div>
+<div class="float-card card-one"><small>Currently</small><strong>Learning & Building ✦</strong></div>
+<div class="float-card card-two"><small>Focus</small><strong>Business × Technology</strong></div>
+</div>
+</section>
+
+<div class="marquee-wrapper"><div class="marquee">
+<span>WEB DEVELOPMENT</span><span>PYTHON</span><span>GITHUB</span><span>BUSINESS ECONOMICS</span><span>DIGITAL TOOLS</span><span>CREATIVE LEARNING</span>
+<span>WEB DEVELOPMENT</span><span>PYTHON</span><span>GITHUB</span><span>BUSINESS ECONOMICS</span><span>DIGITAL TOOLS</span><span>CREATIVE LEARNING</span>
+</div></div>
+
+<section class="section-space reveal" id="about">
+<div class="about-grid">
+<div><div class="section-tag">About Me</div><h2 class="section-title">Business mind.<br><span>Digital curiosity.</span></h2>
+<p>I am Aarthi Karunanithi, currently pursuing B.Com (Computer Applications) at Bon Secours College for Women. My interests combine business, technology and digital tools.</p>
+<p>Through my internship at Tech Vaseegrah, I am gaining exposure to Business Economics and a professional work environment while continuing to develop my technical and creative skills.</p></div>
+<div class="about-right">
+<div class="info-card"><div class="info-icon">🎓</div><h3>Education</h3><p>B.Com (Computer Applications)<br>Bon Secours College for Women<br>2025 – 2028</p></div>
+<div class="info-card"><div class="info-icon">💼</div><h3>Internship</h3><p>Tech Vaseegrah<br>Business Economics-focused internship experience.</p></div>
+<div class="info-card"><div class="info-icon">💻</div><h3>Tech Interest</h3><p>Web development, Python, GitHub and modern digital tools.</p></div>
+<div class="info-card"><div class="info-icon">🚀</div><h3>Career Goal</h3><p>Looking to learn, contribute and grow through internship and entry-level opportunities.</p></div>
+</div></div>
+</section>
+
+<section class="section-space reveal" id="experience">
+<div class="section-tag">Experience</div><h2 class="section-title">Where I am <span>learning.</span></h2>
+<div class="timeline">
+<div class="timeline-item"><div class="timeline-date">Ongoing</div><h3>Business Economics Intern</h3><div class="timeline-company">Tech Vaseegrah</div><p>Currently learning Business Economics topics and gaining exposure to a professional work environment. This experience is helping me understand practical business concepts while developing professional communication, documentation and analytical skills.</p></div>
+<div class="timeline-item"><div class="timeline-date">2025 – 2028</div><h3>B.Com (Computer Applications)</h3><div class="timeline-company">Bon Secours College for Women</div><p>Pursuing undergraduate studies with a combination of commerce, computer applications and technology-oriented learning.</p></div>
+</div>
+</section>
+
+<section class="section-space reveal" id="skills">
+<div class="skills-layout">
+<div><div class="section-tag">Skills</div><h2 class="section-title">Things I <span>work with.</span></h2><p>A growing toolkit built through academic learning, self-practice, projects and professional exposure.</p></div>
+<div class="skills-cloud">
+<span class="skill featured">HTML</span><span class="skill featured">GitHub</span><span class="skill">Python — Basic</span><span class="skill">MS Word</span><span class="skill">MS Office</span><span class="skill">MS Excel — Intermediate</span><span class="skill">PowerPoint</span><span class="skill">Communication</span><span class="skill">Teamwork</span><span class="skill">Time Management</span><span class="skill">Problem Solving</span><span class="skill">Analytical Thinking</span><span class="skill">Adaptability</span><span class="skill">Presentation</span><span class="skill">Documentation</span><span class="skill">Attention to Detail</span>
+</div></div>
+</section>
+
+<section class="section-space reveal" id="project">
+<div class="section-tag">Featured Project</div><h2 class="section-title">Something I <span>built.</span></h2>
+<div class="project-card">
+<div class="project-number">01 / PERSONAL PROJECT</div><h3>The <span>Beyond.</span></h3>
+<p>A personal website project created and published as a practical web development experience. The project helped me practise website creation, GitHub repository management and project workflows.</p>
+<div class="project-tags"><span>Personal Website</span><span>HTML</span><span>GitHub</span><span>Web Development</span><span>Repository Workflow</span></div>
+<div style="margin-top:32px"><a href="https://github.com/aarthikarunanithi042-ship-it" target="_blank" class="btn btn-secondary">View on GitHub ↗</a></div>
+</div>
+</section>
+
+<section class="section-space reveal">
+<div class="section-tag">Certifications</div><h2 class="section-title">Learning beyond <span>classroom.</span></h2>
+<div class="cert-grid">
+<div class="cert-card"><div class="cert-icon">✦</div><h3>Anthropic — Introduction to Model Context Protocol</h3><p>Professional learning focused on Model Context Protocol concepts.</p></div>
+<div class="cert-card"><div class="cert-icon">✦</div><h3>Model Context Protocol: Advanced Topics</h3><p>Advanced professional learning in Model Context Protocol.</p></div>
+<div class="cert-card"><div class="cert-icon">✦</div><h3>Claude Code in Action</h3><p>Professional learning focused on Claude Code and practical usage.</p></div>
+<div class="cert-card"><div class="cert-icon">◈</div><h3>GitHub Basics</h3><p>Simplelearn SkillUp — Certificate of Completion, 16 November 2026.</p></div>
+<div class="cert-card"><div class="cert-icon">◆</div><h3>AI in Tax and Treasury Management</h3><p>HCLTech / CareerCraft Academy / Bon Secours College for Women — 30-hour certification program.</p></div>
+<div class="cert-card"><div class="cert-icon">✓</div><h3>AI for All Initiative</h3><p>Certification program conducted from 24 August to 18 September 2026.</p></div>
+</div>
+</section>
+
+<section class="section-space reveal">
+<div class="about-grid"><div><div class="section-tag">Career Direction</div><h2 class="section-title">Ready for the <span>next chapter.</span></h2></div>
+<div><p style="color:var(--muted);line-height:1.9;margin-top:20px">I am open to internship and entry-level opportunities across business, administration, finance and technology-related roles.</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:25px"><span class="skill">Business</span><span class="skill">Administration</span><span class="skill">Finance</span><span class="skill">Technology</span></div></div></div>
+</section>
+
+<section class="section-space reveal" id="contact">
+<div class="contact-box">
+<div class="section-tag">Contact</div>
+<h2>Let's build something <em>meaningful.</em></h2>
+<p>Whether it is an internship opportunity, collaboration, project discussion or simply connecting professionally, I would be happy to hear from you.</p>
+<div class="contact-actions">
+<a href="mailto:aarthikarunanithi042@gmail.com" class="btn btn-primary">Email Me →</a>
+<a href="https://github.com/aarthikarunanithi042-ship-it" target="_blank" class="btn btn-secondary">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/aarthi-karunanithi-174281411" target="_blank" class="btn btn-secondary">LinkedIn ↗</a>
+</div>
+<div class="contact-info"><a href="mailto:aarthikarunanithi042@gmail.com">✉ aarthikarunanithi042@gmail.com</a><a href="tel:+919080138325">☎ +91 9080138325</a><span>📍 Thiruvaiyaru, Tamil Nadu</span></div>
+</div>
+</section>
+</main>
+
+<footer><div>© <span id="year"></span> <strong>Aarthi Karunanithi</strong></div><div>Designed & built with curiosity ✦</div></footer>
+
+<script>
+document.getElementById("menuBtn").addEventListener("click",()=>{const n=document.querySelector(".nav-links");n.style.display=n.style.display==="flex"?"":"flex";n.style.position="absolute";n.style.top="65px";n.style.left="0";n.style.right="0";n.style.padding="22px";n.style.flexDirection="column";n.style.background="#fff";n.style.borderRadius="25px"});
+document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>{if(innerWidth<=900)document.querySelector(".nav-links").style.display=""}));
+const observer=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add("active")),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(x=>observer.observe(x));
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
